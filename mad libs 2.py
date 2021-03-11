@@ -1,0 +1,5 @@
+print('MAD LIBS CODE 2')
+name = input('What is your name? ')
+food = input('What is your favorite food? ')
+swim = input('Please name your favorite place to swim. ')
+print(name, 'is a small boy. He likes to eat', food, 'and loves to swim at the', swim, '.')
