@@ -1,14 +1,18 @@
 #  review the NUMBER GUESS code then run 
+guess = ''
 secret_word = "code"
 guess_limit = 10
+guess_count = 0
+out_of_guess = False
 
-while True:
-    number_guess = input("guess the secret word: ")
-    if number_guess == secret_word:
-        print("Yes", number_guess,"is correct!\n")
+while guess != secret_word and not out_of_guess:
+    if (guess_count < guess_limit):
+        guess = input('Guess the secret word: ')
+        guess_count += 1
     else:
-        while True:
-            print(number_guess,"is incorrect\n")
-            guess_count = 1
-            att = guess_limit - 1
-            print('attempts left:', att)
+        out_of_guess = True
+
+if out_of_guess:
+    print('Out of guesses. Secret Word is "code"')
+else:
+    print('Correct Guess!!!')
